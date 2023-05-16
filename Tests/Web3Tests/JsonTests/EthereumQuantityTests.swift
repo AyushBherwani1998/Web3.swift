@@ -18,7 +18,7 @@ class EthereumQuantityTests: QuickSpec {
             context("initialization") {
 
                 it("should initialize correctly") {
-                    let q = EthereumQuantity.bytes([0x25, 0xcc, 0xe9, 0xf5])
+                    let q = EthereumQuantity.bytes(bytes: [0x25, 0xcc, 0xe9, 0xf5])
                     expect(q.quantity) == BigUInt(634186229)
 
                     let q2 = EthereumQuantity(quantity: BigUInt(100000000))
@@ -91,8 +91,8 @@ class EthereumQuantityTests: QuickSpec {
 
             context("hashable") {
                 it("should produce correct hashValues") {
-                    let q = EthereumQuantity.bytes([0x25, 0xcc, 0xe9, 0xf5])
-                    expect(q.hashValue) == EthereumQuantity.bytes([0x25, 0xcc, 0xe9, 0xf5]).hashValue
+                    let q = EthereumQuantity.bytes(bytes: [0x25, 0xcc, 0xe9, 0xf5])
+                    expect(q.hashValue) == EthereumQuantity.bytes(bytes: [0x25, 0xcc, 0xe9, 0xf5]).hashValue
 
                     let q2 = EthereumQuantity(quantity: BigUInt(100000000))
                     expect(q2.hashValue) == EthereumQuantity(quantity: BigUInt(100000000)).hashValue

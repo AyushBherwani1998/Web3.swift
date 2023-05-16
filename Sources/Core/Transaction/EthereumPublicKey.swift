@@ -89,7 +89,7 @@ public final class EthereumPublicKey {
             throw Error.internalError
         }
         hash = Array(hash[12...])
-        self.address = try EthereumAddress(rawAddress: hash)
+        self.address = try EthereumAddress(hash)
 
         // Verify public key
         try verifyPublicKey()
@@ -196,7 +196,7 @@ public final class EthereumPublicKey {
             throw Error.internalError
         }
         pubHash = Array(pubHash[12...])
-        self.address = try EthereumAddress(rawAddress: pubHash)
+        self.address = try EthereumAddress(pubHash)
     }
 
     /**

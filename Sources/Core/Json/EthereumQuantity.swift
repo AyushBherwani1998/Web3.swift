@@ -13,7 +13,7 @@ public struct EthereumQuantity {
 
     public let quantity: BigUInt
 
-    public static func bytes(_ bytes: Bytes) -> EthereumQuantity {
+    public static func bytes(bytes: Bytes) -> EthereumQuantity {
         return self.init(quantity: BigUInt(bytes))
     }
 
@@ -66,7 +66,7 @@ public extension EthereumValue {
 extension EthereumQuantity: BytesConvertible {
 
     public init(_ bytes: Bytes) {
-        self = EthereumQuantity.bytes(bytes)
+        self = EthereumQuantity.bytes(bytes: bytes)
     }
 
     public func makeBytes() -> Bytes {

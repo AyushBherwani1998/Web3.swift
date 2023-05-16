@@ -290,7 +290,7 @@ extension EthereumSignedTransaction: RLPItemConvertible {
             throw Error.rlpItemInvalid
         }
         guard let nonce = array[0].bigUInt, let gasPrice = array[1].bigUInt, let gasLimit = array[2].bigUInt,
-            let toBytes = array[3].bytes, let to = try? EthereumAddress(rawAddress: toBytes),
+              let toBytes = array[3].bytes, let to = try? EthereumAddress(toBytes),
             let value = array[4].bigUInt, let data = array[5].bytes, let v = array[6].bigUInt,
             let r = array[7].bigUInt, let s = array[8].bigUInt else {
                 throw Error.rlpItemInvalid

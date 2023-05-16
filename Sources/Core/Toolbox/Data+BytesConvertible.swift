@@ -8,6 +8,8 @@
 import Foundation
 
 extension Data: BytesConvertible {
+    
+    
 
     /**
      * Returns self represented as a byte array.

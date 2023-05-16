@@ -10,7 +10,6 @@ import Foundation
 import BigInt
 
 extension BigUInt: BytesConvertible {
-
     public func makeBytes() -> Bytes {
         var bytes: [UInt8] = []
         for w in self.words {

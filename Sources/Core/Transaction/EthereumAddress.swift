@@ -108,7 +108,7 @@ public struct EthereumAddress {
      *
      * - throws: EthereumAddress.Error.addressMalformed if the rawAddress array is not 20 bytes long.
      */
-    public init(rawAddress: Bytes) throws {
+    public init(_ rawAddress: Bytes) throws {
         guard rawAddress.count == 20 else {
             throw Error.addressMalformed
         }
@@ -202,8 +202,8 @@ extension EthereumAddress: Equatable {
 
 extension EthereumAddress: BytesConvertible {
 
-    public init(_ bytes: Bytes) throws {
-        try self.init(rawAddress: bytes)
+    public init(bytes: Bytes) throws {
+        try self.init(bytes)
     }
 
     public func makeBytes() throws -> Bytes {
