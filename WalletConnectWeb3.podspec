@@ -10,10 +10,10 @@ HTTP RPC interface provided by this library or a custom RPC interface
 (for example IPC,...).
                        DESC
 
-  s.homepage         = 'https://github.com/WalletConnect/Web3.swift'
+  s.homepage         = 'https://github.com/AyushBherwani1998/Web3.swift'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Koray Koska' => 'koray@koska.at' }
-  s.source           = { :git => 'https://github.com/WalletConnect/Web3.swift.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/AyushBherwani1998/Web3.swift', :tag => s.version.to_s }
 
   s.ios.deployment_target = '8.0'
   s.osx.deployment_target = '10.10'
